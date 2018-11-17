@@ -5,6 +5,8 @@ import Aux from "../../../hoc/Aux/Aux";
 
 class Modal extends Component {
   shouldComponentUpdate(nextProps, nextState) {
+    // nextProps.children => if the data in the Model changes like spinner,
+    // it should update the component
     return (
       nextProps.show !== this.props.show ||
       nextProps.children !== this.props.children
